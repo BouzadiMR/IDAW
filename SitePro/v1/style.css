@@ -1,0 +1,102 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: hwb(198 0% 0%);
+}
+
+header, nav, section, footer {
+    margin: 0;
+    padding: 20px;
+    background-color: #ffc30e;
+    border-bottom: 1px solid #ccc;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+
+.index-section {
+    text-align: center;
+    padding: 50px;
+}
+
+.index-section h1 {
+    color: #333;
+}
+
+
+.cv-section h2 {
+    color: #0066cc;
+}
+
+.cv-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu {
+    background-color: #333;
+    overflow: hidden; 
+}
+
+.menu a {
+    float: left; 
+    display: block; 
+    color: #f2f2f2; 
+    text-align: center; 
+    padding: 14px 20px; 
+    text-decoration: none; 
+}
+
+.menu a:hover {
+    background-color: #08c9ff; 
+    color: black; 
+}
+
+
+.cv-section ul li {
+    margin-bottom: 10px;
+}
+
+
+.projets-section h2 {
+    color: #0066cc;
+}
+
+.projets-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.projets-section ul li {
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 1px;
+    background-color: #0075a7;
+    border-top: 1px solid #0194bd;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
