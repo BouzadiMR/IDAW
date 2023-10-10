@@ -4,6 +4,8 @@ require_once("template_header.php");
 require_once("template_menu.php");
 $lang = isset($_GET['lang']) ? $_GET['lang'] : 'fr';
 $currentPageId = 'accueil';
+$currentPageId = 'cv';
+
 
 if(isset($_GET['page'])) {
 
@@ -19,6 +21,7 @@ renderMenuToHTML($currentPageId,$lang);
 ?>
 <section class="corps">
 <?php
+
 $pageToInclude = $lang. "/" . $currentPageId . ".php";
 if(is_readable($pageToInclude))
 require_once($pageToInclude);

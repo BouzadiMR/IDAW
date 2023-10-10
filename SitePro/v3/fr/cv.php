@@ -1,4 +1,4 @@
-
+<a href="index.php?page=cv&lang=en">Anglais</a>
 <section>
     <meta charset="UTF-8">
 

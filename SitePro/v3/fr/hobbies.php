@@ -1,3 +1,4 @@
+<a href="index.php?page=hobbies&lang=en">Anglais</a>
 <section>
     <h1>Hobbies</h1>
     <p><title>Hobbies - Football</title>

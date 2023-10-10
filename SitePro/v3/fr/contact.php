@@ -1,3 +1,4 @@
+<a href="index.php?page=contact&lang=en">Anglais</a>
 
 <section class="contact-section">
     <h2>Contactez-Moi</h2>
