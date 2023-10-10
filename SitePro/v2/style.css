@@ -101,3 +101,9 @@ footer {
     font-size: 2em;
     line-height: 0.6;
   }
+  /* Style de l'élément de menu actuellement sélectionné */
+#currentpage {
+    background-color: #ff6600; /* Orange vif */
+    font-weight: bold;
+    color: #fff;
+}

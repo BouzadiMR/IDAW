@@ -2,13 +2,10 @@
    require_once('template_header.php');
 ?>
 
-<nav>
-    <ul>
-        <li><a href="index.php">Accueil</a></li>
-        <li><a href="cv.php">CV</a></li>
-        <li><a href="hobbies.php">Hobbies</a></li>
-    </ul>
-</nav>
+   
+   <?php
+   require_once('template_menu.php');
+?>
 
 <section>
     <h1>Hobbies</h1>
@@ -30,7 +27,7 @@
           <div class="image-container">
             <img src="53283.png" alt="kooora" width="10">  
         </div>
-          </pre>
+        </pre>
             
             <section id="football-section">
                 <h1>Passion Football</h1>
@@ -50,7 +47,7 @@
                     <h2>Expérience Personnelle</h2>
                     <p>J'ai également joué au football dans une ligue locale où j'ai pu développer mes compétences et comprendre les nuances du jeu.</p>
                 </div>
-                </section>
+             </section>
 </section>
 
 <?php

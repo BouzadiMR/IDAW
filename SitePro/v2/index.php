@@ -2,13 +2,10 @@
    require_once('template_header.php');
 ?>
    
-<nav>
-    <ul>
-        <li><a href="index.php">Accueil</a></li>
-        <li><a href="cv.php">CV</a></li>
-        <li><a href="hobbies.php">Hobbies</a></li>
-    </ul>
-</nav>
+   <?php
+   require_once('template_menu.php');
+   renderMenuToHTML('index')
+?>
 
 <section>
     <h1>Bienvenue sur mon site professionnel!</h1>
