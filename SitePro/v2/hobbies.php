@@ -53,10 +53,11 @@
 </section>
 
 
-</html>
 <footer>
-    <p>© IMT NORD EUROPE.</p>
+    <p>© IMT NORD EUROPE</p>
 </footer>
 
+
 </body>
+
 </html>
