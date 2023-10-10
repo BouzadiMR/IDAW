@@ -1,13 +1,3 @@
-<?php
-   require_once('template_header.php');
-?>
-
-   
-   <?php
-   require_once('template_menu.php');
-   renderMenuToHTML('hobbies')
-?>
-
 <section>
     <h1>Hobbies</h1>
     <p><title>Hobbies - Football</title>
@@ -51,6 +41,3 @@
              </section>
 </section>
 
-<?php
-   require_once('template_footer.php');
-?>

@@ -21,5 +21,5 @@ else
 ?>
 </section>
 <?php
-require_once("footer.php");
+require_once("template_footer.php");
 ?>

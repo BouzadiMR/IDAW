@@ -1,13 +1,3 @@
-<?php
-   require_once('template_header.php');
-?>
-
-
-   
-   <?php
-   require_once('template_menu.php');
-   renderMenuToHTML('cv')
-?>
 
 <section>
     <meta charset="UTF-8">
@@ -93,6 +83,4 @@
         </ul>
     </section>
 </section>
-<?php
-   require_once('template_footer.php');
-?>
+

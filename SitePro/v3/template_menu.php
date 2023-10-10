@@ -1,25 +1,34 @@
 <?php
-function renderMenuToHTML($currentPageId) {
+
+function renderMenuToHTML($currentPageId){
     $mymenu = array(
-        'index' => 'Accueil',
-        'cv' => 'Cv',
-        'hobbies' => 'Hobbies'
-        'infos-technique' => 'Infos techniques'
+        // idPage titre
+        'accueil' => array( 'Accueil' ),
+        'cv' => array( 'Cv' ),
+        'hobbies' => array('Hobbies'),
+        'infos-techniques' => array('Infos techniques'),
+        'contact' => array('Contact me')
+        );
 
-    );
-
-    echo '<nav class="menu">';
-    echo '<ul>';
-
-    foreach($mymenu as $pageId => $pageParameters) {
-        if($pageId == $currentPageId) {
-            echo '<li><a id="currentpage" href="' . $pageId . '.php">' . $pageParameters . '</a></li>';
-        } else {
-            echo '<li><a href="' . $pageId . '.php">' . $pageParameters . '</a></li>';
+        if(isset($_GET['page'])){
+            $currentPageId = $_GET['page'];
         }
-    }
+    
+    
 
-    echo '</ul>';
-    echo '</nav>';
-}
+        echo '<nav class="menu">';
+        echo '<ul>';
+        foreach($mymenu as $pageId => $pageParameters) {
+            $link = "index.php?page=" . $pageId ;
+
+            if($pageId == $currentPageId) {
+                echo '<li><a id="currentpage" href="' . $link .  '">' . $pageParameters[0] . '</a></li>';
+            } else {
+                echo '<li><a href="' . $link . '">' . $pageParameters[0] . '</a></li>';
+            }
+        }
+        echo '</ul>';
+        echo '</nav>';
+    }
+        
 ?>

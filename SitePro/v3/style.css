@@ -124,3 +124,32 @@ footer {
     font-size: 2em; 
     color: #333; 
 }
+.contact-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin: 20px 0;
+}
+
+.contact-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666;
+}
+
+.contact-section a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.contact-section a:hover {
+    text-decoration: underline;
+}
+
