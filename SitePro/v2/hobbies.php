@@ -5,6 +5,7 @@
    
    <?php
    require_once('template_menu.php');
+   renderMenuToHTML('hobbies')
 ?>
 
 <section>
