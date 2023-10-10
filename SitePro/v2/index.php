@@ -31,11 +31,6 @@
     
     <h3>Merci de votre visite !</h3>
 </section>
-<footer>
-    <p>© IMT NORD EUROPE.</p>
-</footer>
-
-
-</body>
-
-</html>
+<?php
+   require_once('template_footer.php');
+?>

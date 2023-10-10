@@ -50,14 +50,9 @@
                     <h2>Expérience Personnelle</h2>
                     <p>J'ai également joué au football dans une ligue locale où j'ai pu développer mes compétences et comprendre les nuances du jeu.</p>
                 </div>
+                </section>
 </section>
 
-
-<footer>
-    <p>© IMT NORD EUROPE</p>
-</footer>
-
-
-</body>
-
-</html>
+<?php
+   require_once('template_footer.php');
+?>
