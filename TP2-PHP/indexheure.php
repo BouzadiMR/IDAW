@@ -6,9 +6,9 @@
     <title>Afficher Heure</title>
 </head>
 <body>
-    <h1>L'heure courante est:</h1>
+    <h1>L'heure courante  est:</h1>
     <?php
-        echo date('H:i:s');  // Affiche l'heure courante au format heures:minutes:secondes
+        echo date('H:i:s');  
     ?>
 </body>
 </html>
