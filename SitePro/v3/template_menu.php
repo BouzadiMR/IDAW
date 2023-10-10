@@ -1,10 +1,11 @@
 <?php
 function renderMenuToHTML($currentPageId) {
     $mymenu = array(
-        'acceuil' => 'Accueil',
+        'index' => 'Accueil',
         'cv' => 'Cv',
         'hobbies' => 'Hobbies'
-    
+        'infos-technique' => 'Infos techniques'
+
     );
 
     echo '<nav class="menu">';
