@@ -51,7 +51,7 @@
                     <p>J'ai également joué au football dans une ligue locale où j'ai pu développer mes compétences et comprendre les nuances du jeu.</p>
                 </div>
 </section>
-</head>
+
 
 </html>
 <footer>
