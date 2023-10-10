@@ -1,4 +1,4 @@
-
+<a href="index.php?page=accueil&lang=en">Anglais</a>
 <section>
     <h1>Bienvenue sur mon site professionnel!</h1>
     <div class="image-container">
