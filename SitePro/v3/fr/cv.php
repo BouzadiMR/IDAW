@@ -5,6 +5,7 @@
     <h1>Mon Curriculum Vitae</h1>
     <p>Information sur mon parcours professionnel et académique.</p>
     <img src="MB.png" alt="MB" width="100">  
+    
     <h2><strong>Formation</strong></h2>
     <section class="section-formation">
     <h3>Institut Mines Télécom Nord Europe</h3>
