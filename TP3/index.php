@@ -37,6 +37,6 @@
     </form>
     
     <h1>Bienvenue sur Notre Site!</h1>
-    <p>Choisissez un style et observez le changement!</p>
+    
 </body>
 </html>
