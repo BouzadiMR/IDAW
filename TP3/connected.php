@@ -1,22 +1,25 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connected</title>
-</head>
-<body>
-    <?php
-        if(isset($_GET['login']) && isset($_GET['password'])) {
-            $login = htmlspecialchars($_GET['login']);
-            $password = htmlspecialchars($_GET['password']);
-
-            echo "<h1>Informations reçues</h1>";
-            echo "<p>Login: ".$login."</p>";
-            echo "<p>Mot de passe: ".$password."</p>";
-        } else {
-            echo "<p>Erreur: Aucune donnée reçue!</p>";
-        }
+<?php
+// on simule une base de données
+$users = array(
+// login => password
+   'Marouane' => 'Bouzadi',
+   'yoda' => 'maitrejedi' );
+$login = "anonymous";
+$errorText = "";
+$successfullyLogged = false;
+if(isset($_GET['login']) && isset($_GET['password'])) {$tryLogin=$_GET['login'];
+    $tryPwd=$_GET['password'];
+    // si login existe et password correspond
+    if( array_key_exists($tryLogin,$users) && $users[$tryLogin]==$tryPwd ) {
+    $successfullyLogged = true;
+    $login = $tryLogin;
+    } else
+       $errorText = "Erreur de login/password";
+    } else
+       $errorText = "Merci d'utiliser le formulaire de login";
+    if(!$successfullyLogged) {
+         echo $errorText;
+    } else {
+         echo "<h1>Bienvenu ".$login."</h1>";
+    }
     ?>
-</body>
-</html>
