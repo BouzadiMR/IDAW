@@ -6,16 +6,25 @@
     <title>Changer de Style</title>
 
     <?php
-        $selected_style = "style1";
+       
+        $default_style = "style1";
+        $selected_style = $default_style;
 
+       
         if (isset($_GET['css'])) {
             $selected_style = htmlspecialchars($_GET['css']); 
-            setcookie("selected_style", $selected_style, time() + (86400 * 30), "/");
+            setcookie("selected_style", $selected_style, time() + (60), "/");
+            echo "<p>Le Style sélectionné est : $selected_style</p>";
+ 
         } elseif (isset($_COOKIE['selected_style'])) {
+            
             $selected_style = htmlspecialchars($_COOKIE['selected_style']);
+
         }
 
+      
         echo "<link rel='stylesheet' type='text/css' href='{$selected_style}.css'>";
+
     ?>
 </head>
 <body>
