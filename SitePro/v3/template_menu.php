@@ -4,10 +4,10 @@ function renderMenuToHTML($currentPageId,$lang){
     $mymenu = array(
     
         'accueil' => array( 'Accueil' ),
-        'cv' => array( 'Cv' ),
-        'hobbies' => array('Hobbies'),
-        'infos-techniques' => array('Infos techniques'),
-        'contact' => array('Contact me')
+        'CV' => array( 'CV' ),
+        'Hobbies' => array('Hobbies'),
+        'Projets' => array('Projets'),
+        'Contact' => array('Contact me')
         );
 
         if(isset($_GET['page'])){

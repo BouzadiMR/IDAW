@@ -1,11 +1,11 @@
 <?php
-session_start(); // Étape 1: Démarrage de la session
+session_start(); 
 
-$users = array('riri' => 'fifi', 'yoda' => 'maitrejedi');
+$users = array('marouane' => '1234', 'yoda' => 'maitrejedi');
 
 if(isset($_POST['login']) && isset($_POST['password'])) {
   if(array_key_exists($_POST['login'], $users) && $users[$_POST['login']] == $_POST['password']) {
-    $_SESSION['login'] = $_POST['login']; // Étape 2: Enregistrement du login dans la session
+    $_SESSION['login'] = $_POST['login']; 
     echo "Bienvenue, " . $_SESSION['login'] . "!";
     echo '<br><a href="logout.php">Se déconnecter</a>';
   } else {
