@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
 -- Généré le : lun. 16 oct. 2023 à 09:26
--- Version du serveur : 10.4.21-MariaDB
--- Version de PHP : 7.4.27
+-- Version du serveur : 10.4.28-MariaDB
+-- Version de PHP : 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -26,26 +26,23 @@ SET time_zone = "+00:00";
 --
 -- Structure de la table `users`
 --
-DROP TABLE IF EXISTS `users`;
 
-CREATE TABLE IF NOT EXISTS `users` (
+CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Déchargement des données de la table `users`
 --
 
-
 INSERT INTO `users` (`id`, `name`, `email`) VALUES
-(1, 'alice', 'alice@example.com'),
-(2, 'bob', 'bob@example.com'),
-(3, 'charlie', 'charlie@example.com'),
-(4, 'david', 'david@example.com'),
-(5, 'eve', 'eve@example.com');
-
+(16, 'Alice Dupont', 'alice.dupont@example.com'),
+(17, 'Bob Martin', 'bob.martin@example.com'),
+(18, 'Charlie Leroux', 'charlie.leroux@example.com'),
+(19, 'David Petit', 'david.petit@example.com'),
+(20, 'Eva Bernard', 'eva.bernard@example.com');
 
 --
 -- Index pour les tables déchargées
@@ -65,7 +62,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
