@@ -18,7 +18,6 @@ try {
     exit;
 }
 
-// Code pour ajouter un utilisateur
 if(isset($_POST['action']) && $_POST['action'] == 'add') {
     $name = $_POST['name'];
     $email = $_POST['email'];
@@ -26,14 +25,12 @@ if(isset($_POST['action']) && $_POST['action'] == 'add') {
     $stmt->execute([$name, $email]);
 }
 
-// Code pour supprimer un utilisateur
 if(isset($_POST['action']) && $_POST['action'] == 'delete') {
     $id = $_POST['id'];
     $stmt = $pdo->prepare("DELETE FROM users WHERE id = ?");
     $stmt->execute([$id]);
 }
 
-// Code pour modifier un utilisateur
 if(isset($_POST['action']) && $_POST['action'] == 'update') {
     $id = $_POST['id'];
     $name = $_POST['name'];
@@ -42,7 +39,6 @@ if(isset($_POST['action']) && $_POST['action'] == 'update') {
     $stmt->execute([$name, $email, $id]);
 }
 
-// Sélection des utilisateurs
 $request = $pdo->prepare("SELECT * from users");
 $request->execute();
 $results = $request->fetchAll(PDO::FETCH_OBJ);
@@ -55,7 +51,6 @@ echo "<head>";
 echo "<title>Gestion des utilisateurs</title>";
 echo "<style>";
 
-// CSS amélioré
 echo "body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
@@ -132,7 +127,6 @@ echo "</head>";
 
 
 
-// Affichage des données dans un tableau HTML
 echo "<table border='1'>";
 echo "<tr>";
 echo "<th>Id</th>";
