@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+    <title>Tabletest</title>
+    <style>
+        body {
+            margin-top: 5em;
+        }
+        .table {
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+    </style>
+</head>
+<body>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Nom</th>
+                <th scope="col">Prénom</th>
+                <th scope="col">Date de naissance</th>
+                <th scope="col">J'aime le cours</th>
+                <th scope="col">Remarques</th>
+                <th scope="col">CRUD</th>
+            </tr>
+        </thead>
+        <tbody id="studentsTableBody">
+        </tbody>
+    </table>
+    <form id="addStudentForm" action="#" onsubmit="onFormSubmit();">
+        <div class="form-group row">
+            <label for="inputNom" class="col-sm-2 col-form-label">Nom</label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" id="inputNom">
+                <!-- Ajout d'une zone pour le message d'erreur -->
+                <span id="nomErrorMessage" style="color: red; display: none;">Veuillez préciser le nom.</span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputPrenom" class="col-sm-2 col-form-label">Prénom</label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" id="inputPrenom">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputDateNaissance" class="col-sm-2 col-form-label">Date de naissance</label>
+            <div class="col-sm-3">
+                <input type="date" class="form-control" id="inputDateNaissance">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputJaimeLeCours" class="col-sm-2 col-form-label">J'aime le cours</label>
+            <div class="col-sm-3">
+                <input type="checkbox" class="form-control" id="inputJaimeLeCours">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputRemarques" class="col-sm-2 col-form-label">Remarques</label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" id="inputRemarques">
+            </div>
+        </div>
+        <div class="form-group row">
+            <span class="col-sm-2"></span>
+            <div class="col-sm-2">
+                <button type="submit" class="btn btn-primary form-control">Submit</button>
+            </div>
+        </div>
+    </form>
+
+    <script>
+        function onFormSubmit() {
+            // prevent the form to be sent to the server
+            event.preventDefault();
+            
+            let nom = $("#inputNom").val();
+            
+            if (nom.trim() === "") {
+                // Affiche le message d'erreur si le nom est vide
+                $("#nomErrorMessage").show();
+                return;
+            } else {
+                // Cache le message d'erreur si le nom est renseigné
+                $("#nomErrorMessage").hide();
+            }
+            
+            let prenom = $("#inputPrenom").val();
+            let dateNaissance = $("#inputDateNaissance").val();
+            let aimeCours = $("#inputJaimeLeCours").is(":checked") ? "oui" : "non";
+            let remarques = $("#inputRemarques").val();
+    
+            $("#studentsTableBody").append(`<tr><td>${nom}</td><td>${prenom}</td><td>${dateNaissance}</td><td>${aimeCours}</td><td>${remarques}</td><td>Edit/Delete</td></tr>`);
+        }
+    </script>
+</body>
+</html>
